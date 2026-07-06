@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>inline 要素とテキストの親和性</title>
+    <style>
+        .highlight-inline {
+            background-color: yellow;
+            padding: 2px 5px;
+        }
+        .highlight-inline-block {
+            display: inline-block;
+            background-color: lightcoral;
+            color: white;
+            padding: 2px 5px;
+        }
+        .icon-inline {
+            width: 20px;
+            height: 20px;
+            vertical-align: middle; /* テキストの中央に揃える */
+        }
+        .icon-inline-block {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            vertical-align: middle; /* テキストの中央に揃える */
+        }
+    </style>
+</head>
+<body>
+    <p>これは通常のテキストです。
+        <span class="highlight-inline">この部分は inline 要素</span>で強調されています。
+        そして、また通常のテキストが続きます。
+    </p>
+
+    <p>これは通常のテキストです。
+        <span class="highlight-inline-block">この部分は inline-block 要素</span>で強調されています。
+        そして、また通常のテキストが続きます。
+    </p>
+
+</body>
+</html>

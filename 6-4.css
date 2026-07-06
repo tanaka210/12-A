@@ -1,0 +1,118 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 上部に寄せる */
+    min-height: 100vh;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 30px;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    width: 90%;
+    max-width: 600px;
+}
+
+.example-group {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+h3 {
+    color: #34495e;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+/* --- :hover の例 --- */
+.hover-box {
+    width: 150px;
+    height: 70px;
+    background-color: #3498db; /* 青 */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* 滑らかな変化 */
+}
+.hover-box:hover {
+    background-color: #2980b9; /* 濃い青 */
+    transform: translateY(-5px); /* 少し上に浮き上がる */
+}
+
+/* --- :active の例 --- */
+.active-button {
+    padding: 12px 25px;
+    font-size: 1.1em;
+    background-color: #e74c3c; /* 赤 */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.1s ease, transform 0.1s ease; /* 素早い反応 */
+}
+.active-button:active {
+    background-color: #c0392b; /* 濃い赤 */
+    transform: translateY(2px); /* 押し込まれたように見せる */
+    box-shadow: none; /* 影をなくす */
+}
+
+/* --- :focus の例 --- */
+.focus-input {
+    padding: 10px 15px;
+    width: 80%;
+    max-width: 250px;
+    border: 2px solid #bdc3c7;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* 滑らかな変化 */
+}
+.focus-input:focus {
+    border-color: #2ecc71; /* 緑 */
+    box-shadow: 0 0 8px rgba(46, 204, 113, 0.5); /* 光るような影 */
+    outline: none; /* デフォルトのフォーカスアウトラインを消す（任意） */
+}
+
+/* --- :checked の例 --- */
+.checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+}
+.checked-checkbox {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    cursor: pointer;
+    /* デフォルトのチェックボックスのスタイルをリセットする CSS */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 2px solid #3498db;
+    border-radius: 4px;
+    outline: none;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.checked-checkbox:checked {
+    background-color: #3498db; /* チェックされたら背景を青に */
+    border-color: #3498db;
+}
+.checked-checkbox:checked + label {
+    color: #3498db; /* チェックされたらラベルの色も青に */
+    font-weight: bold;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}

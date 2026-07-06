@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>疑似クラスとTransitionのデモ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>擬似クラスと`transition`のデモ</h1>
+
+        <div class="example-group">
+            <h3>`:hover` の例</h3>
+            <div class="box hover-box">マウスを乗せてください</div>
+        </div>
+
+        <div class="example-group">
+            <h3>`:active` の例</h3>
+            <button class="active-button">クリックしてください</button>
+        </div>
+
+        <div class="example-group">
+            <h3>`:focus` の例</h3>
+            <input type="text" class="focus-input" placeholder="ここをクリックまたはTabキー">
+        </div>
+
+        <div class="example-group">
+            <h3>`:checked` の例</h3>
+            <div class="checkbox-wrapper">
+                <input type="checkbox" id="myCheckbox" class="checked-checkbox">
+                <label for="myCheckbox">チェックすると色が変わります</label>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

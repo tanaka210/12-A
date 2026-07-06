@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <h1>旅のプラン紹介</h1>
+    <h3>このページでは、人気の旅行プランとお申し込みフォームを紹介します。</h3>
+    <h2>料金表</h2>
+    
+    <table border="1">
+        <tr>
+            <th>プラン名</th>
+            <th>日数</th>
+            <th>料金</th>
+        </tr>
+        <tr>
+            <td>北海道満喫ツアー</td>
+            <td>3日間</td>
+            <td>55,000円</td>
+        </tr>
+        <tr>
+            <td>沖縄リゾート</td>
+            <td>4日間</td>
+            <td>68,000円</td>
+        </tr>
+    </table>
+    <h2>プラン内容</h2>
+
+    <dl>
+    <dt>宿泊</dt>
+    <dd>提携ホテルまたは温泉旅館</dd>
+    
+    <dt>食事</dt>
+    <dd>朝食・夕食付き</dd>
+
+    </dl>
+
+    <h2>お問い合わせフォーム</h2>
+      <form action="#" method="get">
+  <p>
+    <label>名前：<input type="text" name="name" /></label>
+  </p>
+  <p>
+    <label>メールアドレス：<input type="email" name="email" /></label>
+  </p>
+<p>
+  <label
+    >希望プラン：
+    <select name="grade">
+      <option value="1">北海道満喫ツアー</option>
+      <option value="2">沖縄リゾート</option>
+    </select>
+  </label>
+</p>
+<p>
+  <label
+    >出発希望日：</label>
+　<input type="date">
+</p>
+<p>
+  <label
+    >ご要望：<br />
+    <textarea name="message" rows="4" cols="40"></textarea>
+  </label>
+</p>
+ <p>
+    <label> <input type="checkbox" name="agree" /> 利用規約に同意します </label>
+  </p>
+<p>
+  <button type="submit">送信</button>
+</p>
+</form>
+    
+</body>
+</html>

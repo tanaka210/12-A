@@ -1,0 +1,40 @@
+/* design1：シンプル・クリーン */
+
+body {
+  background-color: #f4f4f4;
+}
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 8px;
+  padding: 32px;
+  width: 300px;
+}
+
+.name {
+  font-size: 22px;
+  font-weight: bold;
+  color: #222222;
+}
+
+.tag {
+  font-size: 13px;
+  color: #888888;
+}
+
+.bio {
+  font-size: 14px;
+  line-height: 1.8;
+  color: #555555;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #222222;
+  color: #ffffff;
+  padding: 8px 20px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 13px;
+}

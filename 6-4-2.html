@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>擬似クラス応用デモ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>擬似クラス応用デモ</h1>
+
+        <div class="example-group">
+            <h3>リンクの状態 (`:link`, `:visited`)</h3>
+            <p>下のリンクをクリックして、ページを移動してから戻ってみましょう。</p>
+            <a href="about.html" class="my-link">リンク先ページへ (未訪問は赤)</a><br>
+            <a href="https://example.com" class="my-link" target="_blank">外部サイトへ (未訪問は赤)</a>
+            <p>※ `about.html` ファイルも作成してください。</p>
+        </div>
+
+        <div class="example-group">
+            <h3>最初と最後の子要素 (`:first-child`, `:last-child`)</h3>
+            <ul class="my-list">
+                <li>リストアイテム 1 (最初の子)</li>
+                <li>リストアイテム 2</li>
+                <li>リストアイテム 3</li>
+                <li>リストアイテム 4 (最後の子)</li>
+            </ul>
+        </div>
+
+        <div class="example-group">
+            <h3>N番目の子要素 (`:nth-child(n)`)</h3>
+            <ul class="my-striped-list">
+                <li>アイテム 1</li>
+                <li>アイテム 2</li>
+                <li>アイテム 3</li>
+                <li>アイテム 4</li>
+                <li>アイテム 5</li>
+                <li>アイテム 6</li>
+                <li>アイテム 7</li>
+            </ul>
+            <p>偶数番目のアイテムの背景色が変わります。</p>
+        </div>
+
+    </div>
+
+    </body>
+</html>
+

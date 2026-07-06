@@ -1,0 +1,18 @@
+body{
+    background-color: #e8f4ff;
+}
+    h1{
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    color: steelblue;
+    border-bottom: 3px solid #7c3aed;
+}
+p{
+    font-size: 18px;
+    line-height: 1.8;
+    font-family: "Noto Sans JP",sans-serif;
+    color: #333333;
+    border-left: 1px solid #aaa;
+    border-radius: 8px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ブロック要素とインライン要素</title>
+    <style>
+        body {
+            border: 1px solid #ccc; /* ページ全体の境界線 */
+        }
+        div {
+            background-color: lightcoral;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+        }
+        span {
+            background-color: lightgreen;
+            color: black;
+            margin: 5px;
+        }
+        p {
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <h2>divによるブロック要素</h2>
+    <div>これはブロック要素です。</div>
+    <div>これもブロック要素です。</div>
+    <b>div、ブロック要素の特徴</b><br>
+    ブロック要素は1行を占有し、上下に改行を含みます。このため、縦に並びます。<br>
+    初期状態では親要素（この場合body）の左右いっぱいに広がります。
+
+    <h2>spanによるインライン要素</h2>
+    <span>これはインライン要素です。</span>
+    <span>これもインライン要素です。</span>
+    <br>
+    <b>span、インライン要素の特徴</b><br>
+    インライン要素は行内の文字として扱います。改行を含まないため、横に並びます。<br>
+    インライン要素は行内の文字として扱うので、上下の空間を設定できません。
+<hr>
+
+    <h2>①ブロック要素の中のインライン要素で上下の空間を確認する</h2>
+    <p>これはpタグ、ブロック要素です。<span>これはp要素の中のspanタグ、インライン要素です。</span><span>2つめのspanです</span></p>
+
+    spanタグにstyle属性を使って、padding:10px;を設定してください。<br>
+    子要素のコンテンツが大きくなりますが、親要素であるpタグのボックスにどのような影響があるでしょうか？
+    <br><br>
+
+    <h2>②ブロック要素の中のブロック要素で上下の空間を確認する</h2>
+    <p>これはpタグ、ブロック要素です。<span style="display: block;">これはp要素の中のspanタグをブロック要素に変更したものです。</span><span style="display:block;">2つめのspanをブロック要素に変更したものです</span></p>
+
+    インライン要素はCSSプロパティのdisplayをblockに指定するとブロック要素に変更できます。<br>
+    ブロック要素にしたspanタグに、プロパティpadding:10px;を設定してください。<br>
+    子要素のコンテンツが大きくなりますが、親要素であるpタグのボックスにどのような影響があるでしょうか？
+    <br><br>
+
+    <h2>③ブロック要素の中のブロック要素をインラインブロックに変更する</h2>
+    <p>これはpタグ、ブロック要素です。<span style="display: block;">これはp要素の中のspanタグをブロック要素に変更したものです。</span><span style="display:block;">2つめのspanをブロック要素に変更したものです</span></p>
+    ブロック要素にしたspanタグのdisplayプロパティ値をinline-blockに変更してください。<br>
+    インラインブロック要素は横並びになるでしょうか？<br>
+    次に、インラインブロック要素にしたspanタグに、プロパティpadding:10px;を設定してください。<br>
+    子要素のコンテンツが大きくなりますが、親要素であるpタグのボックスにどのような影響があるでしょうか？
+</body>
+</html>

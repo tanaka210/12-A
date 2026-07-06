@@ -1,0 +1,79 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 上部に寄せる */
+    min-height: 100vh;
+    background-color: #f8f9fa; /* 淡いグレーの背景 */
+    margin: 0;
+    padding: 30px;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    width: 90%;
+    max-width: 800px;
+}
+
+.example-group {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fcfcfc;
+}
+
+h3 {
+    color: #6f42c1; /* 紫系のタイトル色 */
+    margin-top: 0;
+}
+
+.box {
+    width: 100px;
+    height: 100px;
+    background-color: #007bff; /* 青色 */
+    margin: 20px auto;
+    border-radius: 8px;
+    
+    /* 全てのボックスに共通のtransition設定 */
+    transition: transform 0.4s ease-out, background-color 0.4s ease-out;
+}
+
+/* --- transform 関数の適用例 --- */
+
+/* box-translate: 移動 */
+.box-translate {
+    background-color: #ffc107; /* 黄色 */
+}
+.box-translate:hover {
+    transform: translateX(50px); /* 右に50px移動 */
+    background-color: #e0a800;
+}
+
+/* box-scale: 拡大縮小 */
+.box-scale {
+    background-color: #28a745; /* 緑色 */
+}
+.box-scale:hover {
+    transform: scale(1.3); /* 1.3倍に拡大 */
+    background-color: #218838;
+}
+
+/* box-rotate: 回転 */
+.box-rotate {
+    background-color: #dc3545; /* 赤色 */
+}
+.box-rotate:hover {
+    transform: rotate(90deg); /* 時計回りに90度回転 */
+    background-color: #c82333;
+}
+
+p {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+}

@@ -1,0 +1,107 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* 上部に寄せる */
+    min-height: 100vh;
+    background-color: #e0f8f0; /* 淡いグリーンの背景 */
+    margin: 0;
+    padding: 30px;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    width: 90%;
+    max-width: 800px;
+}
+
+.example-group {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+h3 {
+    color: #28a745; /* 緑系のタイトル色 */
+    margin-top: 0;
+}
+
+.box {
+    width: 100px;
+    height: 50px;
+    background-color: #007bff;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px auto;
+    border-radius: 5px;
+    font-weight: bold;
+
+    /* 全てのボックスに共通の遷移設定（ホバーで幅が変わる） */
+    /* これを個別のボックスでオーバーライドしていきます */
+    transition: width 0.5s ease; /* widthを0.5sかけてeaseでアニメーション */
+}
+
+/* --- サブプロパティの適用例 --- */
+
+/* box1: プロパティとデュレーションの個別指定 */
+.box1 {
+    background-color: #ffc107; /* 黄色 */
+    /* widthとbackground-colorのみを0.8秒かけて変化させる */
+    transition-property: width, background-color; 
+    transition-duration: 0.8s;
+}
+.box1:hover {
+    width: 200px;
+    background-color: #e0a800;
+}
+
+
+/* box2: timing-function: ease (初期値) */
+.box2 {
+    background-color: #17a2b8; /* 水色 */
+    transition-timing-function: ease; /* あえて明示 */
+}
+.box2:hover {
+    width: 200px;
+}
+
+/* box3: timing-function: linear */
+.box3 {
+    background-color: #dc3545; /* 赤色 */
+    transition-timing-function: linear; /* 一定速度 */
+}
+.box3:hover {
+    width: 200px;
+}
+
+/* box4: timing-function: ease-in-out */
+.box4 {
+    background-color: #6f42c1; /* 紫色 */
+    transition-timing-function: ease-in-out; /* ゆっくり始まってゆっくり終わる */
+}
+.box4:hover {
+    width: 200px;
+}
+
+/* box5: delayの指定 */
+.box5 {
+    background-color: #fd7e14; /* オレンジ色 */
+    transition-delay: 0.5s; /* 0.5秒遅れてアニメーション開始 */
+}
+.box5:hover {
+    width: 200px;
+}
+
+p {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+}

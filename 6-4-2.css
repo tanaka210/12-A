@@ -1,0 +1,124 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 30px;
+}
+
+.container {
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    width: 90%;
+    max-width: 600px;
+}
+
+.example-group {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+h3 {
+    color: #34495e;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+p {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 10px;
+}
+
+/* --- リンクの状態の擬似クラス --- */
+.my-link {
+    text-decoration: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+    transition: background-color 0.2s ease;
+}
+
+.my-link:link {
+    color: white;
+    background-color: #e74c3c; /* 未訪問のリンクは赤 */
+}
+
+.my-link:visited {
+    color: white;
+    background-color: #8e44ad; /* 訪問済みのリンクは紫 */
+}
+
+.my-link:hover {
+    opacity: 0.8;
+}
+
+/* --- 最初と最後の子要素の擬似クラス --- */
+.my-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px auto;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.my-list li {
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+.my-list li:first-child {
+    background-color: #3498db; /* 最初の子は青 */
+    color: white;
+    font-weight: bold;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.my-list li:last-child {
+    background-color: #2ecc71; /* 最後の子は緑 */
+    color: white;
+    font-weight: bold;
+    border-bottom: none; /* 最後のアイテムは下線なし */
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* --- N番目の子要素の擬似クラス --- */
+.my-striped-list {
+    list-style: none;
+    padding: 0;
+    margin: 15px auto;
+    width: 200px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.my-striped-list li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    text-align: left;
+}
+
+/* 偶数番目のアイテムにスタイルを適用 */
+.my-striped-list li:nth-child(even) {
+    background-color: #f9f9f9; /* 偶数番目は薄いグレー */
+}
+
+/* 奇数番目のアイテムにスタイルを適用 (デフォルトと異なる色にする場合) */
+.my-striped-list li:nth-child(odd) {
+    background-color: #fff; /* 奇数番目は白 */
+}
