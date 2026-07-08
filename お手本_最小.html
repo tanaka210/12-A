@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--
+  ★ 13-1で「必ず作る」最小お手本（白背景・4ブロックだけ）★
+  ================================================================
+  これが 13-1 のゴールです。まずこれだけ作れば完了。
+  ・1本の縦の並び（オートレイアウト）に、4ブロックを積むだけ。
+  ・セクションは「色パネル」（Fill＋角丸＋余白）で区切る：③=薄グレー / ④=黒。
+    ※ 全幅の色バンド・境界線・container の2層構造は使いません（それは index.html の発展）。
+
+  4ブロック：
+    ① ナビ（簡易）  … ロゴ ＋ ボタン
+    ② ヒーロー      … 大見出し ＋ 一言 ＋ ボタン
+    ③ 特徴          … 見出し ＋ 自作カード3枚（Week 12）
+    ④ CTA（簡易）   … 見出し ＋ ボタン
+
+  ※ もっと作り込みたい人・発展は index.html（9セクションのフル版＝参考）を見る。
+  ※ 見た目の3要素は「自由に決めず選ぶ」：
+      色＝Variable ／ 文字＝スタイル ／ 余白＝トークン
+-->
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusNote（最小お手本）</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="sds.css">            <!-- 既製システム(SDS)：色・文字・ボタン・タグ -->
+  <link rel="stylesheet" href="design-system.css">  <!-- 自作(Week 12)のカード -->
+  <style>
+    /* この最小版だけの、ごく簡単なレイアウト（白背景・1列・4ブロック） */
+    body { background: #ffffff; }
+    .min-page {
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 48px 24px;          /* 上下48 / 左右24 */
+      display: flex;               /* = 縦のオートレイアウト */
+      flex-direction: column;
+      gap: 64px;                   /* ブロックとブロックの間 */
+    }
+    .min-nav {                     /* ① ナビ簡易：ロゴ↔ボタン */
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .min-block {                   /* ②④ 縦に積む中身 */
+      display: flex;
+      flex-direction: column;
+      gap: 24px;                   /* 要素の間 */
+      align-items: flex-start;
+    }
+    .min-block--center { align-items: center; text-align: center; }
+    .min-actions { display: flex; gap: 12px; }
+    .min-head { display: flex; flex-direction: column; gap: 12px; margin-bottom: 24px; }
+
+    /* ★ 背景色でセクションを区切る「色パネル」（Fill＋角丸＋余白だけ） */
+    .min-panel { padding: 32px; border-radius: 16px; }         /* radius/400・space-800 */
+    .min-panel--gray { background: #f5f5f5; }                  /* background/default/secondary */
+    .min-panel--dark { background: #2c2c2c; color: #f5f5f5;    /* background/brand/default */
+                       padding: 48px 24px; }
+    .min-panel--dark .h-section { color: #f5f5f5; }
+    /* 黒パネルの上は白ボタンで対比（4原則の「対比」） */
+    .min-panel--dark .sds-btn--primary { background: #ffffff; color: #1e1e1e; }
+  </style>
+</head>
+<body>
+
+  <div class="min-page">
+
+    <!-- ① ナビ（簡易） -->
+    <nav class="min-nav">
+      <div class="sds-nav__logo">FocusNote</div>
+      <a href="#" class="sds-btn sds-btn--primary">無料で始める</a>
+    </nav>
+
+    <!-- ② ヒーロー -->
+    <section class="min-block">
+      <h1 class="h-hero">考えごとを、そのまま形に。</h1>
+      <p class="lead">思いついたことをすぐ書き留められる、シンプルなノートアプリ。</p>
+      <div class="min-actions">
+        <a href="#" class="sds-btn sds-btn--primary">無料で始める</a>
+        <a href="#" class="sds-btn sds-btn--neutral">特徴を見る</a>
+      </div>
+    </section>
+
+    <!-- ③ 特徴：見出し＋自作カード3枚（薄グレーのパネルで区切る） -->
+    <section class="min-panel min-panel--gray">
+      <div class="min-head">
+        <h2 class="h-section">FocusNote の3つの特徴</h2>
+      </div>
+      <div class="sds-cards">
+
+        <article class="card">
+          <img class="card__thumb"
+               src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='160'%3E%3Crect width='100%25' height='100%25' fill='%23f5f5f5'/%3E%3Ctext x='50%25' y='50%25' font-size='16' fill='%23757575' text-anchor='middle' dominant-baseline='middle'%3Eすぐ書ける%3C/text%3E%3C/svg%3E"
+               alt="すぐ書けるイメージ">
+          <div class="card__body">
+            <h3 class="card__title text-title">すぐ書ける</h3>
+            <p class="card__desc text-body">開いた瞬間に入力欄。思いつきを逃しません。</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card__thumb"
+               src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='160'%3E%3Crect width='100%25' height='100%25' fill='%23f5f5f5'/%3E%3Ctext x='50%25' y='50%25' font-size='16' fill='%23757575' text-anchor='middle' dominant-baseline='middle'%3Eすぐ探せる%3C/text%3E%3C/svg%3E"
+               alt="すぐ探せるイメージ">
+          <div class="card__body">
+            <h3 class="card__title text-title">すぐ探せる</h3>
+            <p class="card__desc text-body">キーワード検索で、書いたメモがすぐ見つかります。</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <img class="card__thumb"
+               src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='280' height='160'%3E%3Crect width='100%25' height='100%25' fill='%23f5f5f5'/%3E%3Ctext x='50%25' y='50%25' font-size='16' fill='%23757575' text-anchor='middle' dominant-baseline='middle'%3Eどこでも同期%3C/text%3E%3C/svg%3E"
+               alt="どこでも同期イメージ">
+          <div class="card__body">
+            <h3 class="card__title text-title">どこでも同期</h3>
+            <p class="card__desc text-body">スマホでもPCでも、同じメモをすぐ開けます。</p>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ④ CTA（簡易・黒パネルで区切る） -->
+    <section class="min-block min-block--center min-panel min-panel--dark">
+      <h2 class="h-section">今日から、書きはじめよう。</h2>
+      <a href="#" class="sds-btn sds-btn--primary">無料で始める</a>
+    </section>
+
+    <!-- 出典表記（1行） -->
+    <p class="muted" style="font-size:14px">
+      デザイン土台：Simple Design System（Figma Community, figma/sds）/ CC BY 4.0
+    </p>
+
+  </div>
+
+</body>
+</html>
